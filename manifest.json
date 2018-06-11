@@ -1,0 +1,40 @@
+//{
+//  "name": "Some Project",
+//  "version": "1.0",
+//  "description": "let me decide the project first",
+//  "permissions": ["storage"],
+//  "background": {
+//      "scripts": ["background.js"],
+//      "persistent": false
+//    },
+//  "browser_action": {
+//      "default_popup": "popup.html",
+//      "default_icon": {
+//        "16": "image.png"
+//      }
+//    },
+//  "icons": {
+//    "16": "image.png"
+//  },
+//  "manifest_version": 2
+//}
+
+{
+  "manifest_version": 2,
+  "name": "Duplicate Tab",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-2.1.3.min.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "image.png"
+  }
+}
